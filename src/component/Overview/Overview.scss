@@ -1,0 +1,77 @@
+.container {
+  padding: 0 0.5rem;
+}
+
+.my-bg::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1150px;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 244, 242, 0.4) 0%,
+    #ffffff 0.01%,
+    rgba(225, 248, 249, 0.53) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overview {
+  .mental-health {
+    border: 1px solid #b4b4b4;
+    padding: 0.6rem 1rem;
+    border-radius: 5rem;
+    font-weight: bold;
+    color: #525252;
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 1rem 0;
+
+    .biru {
+      color: #00adb5;
+    }
+  }
+
+  .description {
+    color: #484848;
+  }
+
+  a {
+    background-color: #00adb5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+
+    &:hover {
+      box-shadow: 0px 2px 15px #73f4fa;
+      color: white;
+    }
+  }
+
+  .vector-kesehatan {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 766px) {
+  .overview {
+    .vector-kesehatan {
+      width: 80%;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .my-bg::after {
+    height: 730px;
+  }
+}
