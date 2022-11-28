@@ -1,0 +1,37 @@
+.my-nav {
+  margin: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: -10px -30px 40px rgba($color: #000, $alpha: 0.1), 10px 30px 40px rgba(0, 0, 0, 0.11);
+
+  .nav-item {
+    margin: 0.2rem;
+  }
+
+  .btn-login {
+    background-color: #00adb5;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: 0px 2px 15px #73f4fa;
+    }
+    a {
+      color: white;
+    }
+  }
+  .nav-link {
+    padding: 0.7rem 1.5rem !important;
+    font-weight: 600;
+    &:hover:not(.nav-link__login) {
+      color: #00adb5;
+    }
+  }
+}
+.bi-arrow-right {
+  font-size: medium;
+  margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .my-nav {
+    margin: 1.5rem 3rem;
+  }
+}
