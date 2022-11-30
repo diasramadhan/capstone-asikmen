@@ -1,14 +1,8 @@
 import React from 'react';
-import Navbar from './component/Navbar/Navbar';
-import Overview from './component/Overview/Overview';
+import HomePage from './pages/HomePage';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Overview />
-    </>
-  );
+  return <HomePage />;
 }
 
 export default App;

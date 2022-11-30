@@ -59,19 +59,24 @@
   }
 
   .vector-kesehatan {
-    width: 90%;
+    width: 85%;
   }
 }
 
 @media only screen and (min-width: 766px) {
   .overview {
     .vector-kesehatan {
-      width: 80%;
+      width: 60%;
     }
   }
 }
 @media only screen and (min-width: 992px) {
   .my-bg::after {
     height: 730px;
+  }
+  .overview {
+    .vector-kesehatan {
+      width: 75%;
+    }
   }
 }
