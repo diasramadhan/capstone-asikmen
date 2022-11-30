@@ -5,6 +5,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container-footer">
+        <hr />
+
         <div className="row-footer">
           <div className="footer-col">
             <img src="./img/logo-footer.png" alt="logo asikmen" className="footer-asikmen" />
@@ -84,6 +86,7 @@ function Footer() {
         </div>
 
         <hr />
+
         <div className="copy-right">
           <p>Copyright © 2022</p>
           <div className="right">
