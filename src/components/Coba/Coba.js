@@ -3,7 +3,7 @@ import './Coba.scss';
 
 function Coba() {
   return (
-    <div className="container text-center ">
+    <div className="container text-center mt-5">
       <section className="cobain">
         <h2>Cobain Aplikasi Keren Ini Sekarang!</h2>
         <p className="description">
