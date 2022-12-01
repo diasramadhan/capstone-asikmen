@@ -1,10 +1,10 @@
 import React from 'react';
-import LoginInput from './components/LoginInput/LoginInput';
+import LoginPage from './pages/LoginPage';
 import Navbar from './components/Navbar/Navbar';
-import RegisterInput from './components/RegisterInput/RegisterInput';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
-  const page = [<LoginInput />, <RegisterInput />];
+  const page = [<LoginPage />, <RegisterPage />];
 
   return (
     <>
