@@ -1,0 +1,37 @@
+.artikel {
+  h2 {
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+  .green {
+    color: #00adb5;
+  }
+  .row-artikel {
+    row-gap: 2rem;
+
+    .col-center {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+  .card-artikel {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+
+    h3 a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #00adb5;
+    }
+    p {
+      color: #bbb;
+    }
+
+    .img-artikel {
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+}
