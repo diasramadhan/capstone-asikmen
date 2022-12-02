@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
+import { BsArrowRight } from 'react-icons/bs';
 
 function Navbar() {
   return (
@@ -34,14 +35,14 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item ">
-              <a className="nav-link" aria-current="page" href="#footer">
+              <a className="nav-link" aria-current="page" href="#artikel">
                 Artikel
               </a>
             </li>
             <li className="nav-item btn-login d-flex align-items-center text-white ">
               <a className="nav-link nav-link__login" aria-current="page" href="#login">
                 Login
-                <i className="bi bi-arrow-right" />
+                <BsArrowRight strokeWidth={1} className="bi bi-arrow-right" />
               </a>
             </li>
           </ul>

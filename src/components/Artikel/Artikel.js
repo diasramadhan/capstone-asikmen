@@ -25,7 +25,7 @@ function Artikel() {
   }, []);
 
   return (
-    <section className="artikel mt-5">
+    <section className="artikel mt-5" id="artikel">
       <div className="container">
         <h2 className="green">Artikel</h2>
         <h2>Tingkatkan Kesehatan Mental Anda</h2>

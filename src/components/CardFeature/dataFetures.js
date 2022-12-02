@@ -16,7 +16,7 @@ export default function dataFeatures() {
       img: './img/feature-3.png',
       title: 'Todo Solusi Kesehatan',
       description:
-        'Pergi kepasar membeli gula,masalah kesehatan mentalmu dapat diatasi dengan segera. Ikuti solusi yang kami berikan ',
+        'Pergi kepasar membeli gula,masalah kesehatan mentalmu dapat diatasi dengan segera. Ikuti solusi yang kami berikan ! ',
     },
   ];
 }
