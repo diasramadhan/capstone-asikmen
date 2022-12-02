@@ -1,8 +1,11 @@
 import React from 'react';
-import '../LoginInput/LoginInput.scss';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import {
+  createUserWithEmailAndPassword, signOut, updateProfile
+} from 'firebase/auth';
 import { auth } from '../../utils/firebaseConfig';
 import useInput from '../../hooks/useInput';
+import '../LoginInput/LoginInput.scss';
 
 function RegisterInput() {
   const [name, nameChange] = useInput('');
@@ -10,17 +13,20 @@ function RegisterInput() {
   const [password, passwordChange] = useInput('');
   const [passwordConfirm, passwordConfirmChange] = useInput('');
 
+  const navigate = useNavigate();
+
   const registerFormHandle = async (e) => {
     e.preventDefault();
+
     try {
       if (password === passwordConfirm) {
-        await createUserWithEmailAndPassword(auth, email, password);
-        await updateProfile(auth.currentUser, {
+        const { user } = await createUserWithEmailAndPassword(auth, email, password);
+        await updateProfile(user, {
           displayName: name,
         });
-        if (auth.currentUser) {
-          alert('Register berhasil');
-        }
+        await signOut(auth);
+        navigate('/');
+        alert('Register berhasil!');
       } else {
         alert('Konfirmasi password tidak sama!');
       }
@@ -31,40 +37,40 @@ function RegisterInput() {
 
   return (
     <form onSubmit={registerFormHandle}>
-      <label className="d-block text-primary" htmlFor="name">
+      <label className="d-block text-primary fw-bold" htmlFor="name">
         Nama
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="text"
           id="name"
           onChange={nameChange}
           required
         />
       </label>
-      <label className="d-block mt-3 text-primary" htmlFor="email">
+      <label className="d-block mt-3 text-primary fw-bold" htmlFor="email">
         Email
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="email"
           id="email"
           onChange={emailChange}
           required
         />
       </label>
-      <label className="d-block mt-3 text-primary" htmlFor="password">
+      <label className="d-block mt-3 text-primary fw-bold" htmlFor="password">
         Password
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="password"
           id="password"
           onChange={passwordChange}
           required
         />
       </label>
-      <label className="d-block mt-3 text-primary" htmlFor="passwordConfirm">
+      <label className="d-block mt-3 text-primary fw-bold" htmlFor="passwordConfirm">
         Konfirmasi Password
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="password"
           id="passwordConfirm"
           onChange={passwordConfirmChange}

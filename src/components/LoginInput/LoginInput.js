@@ -10,9 +10,9 @@ function LoginInput() {
 
   const loginFormHandle = async (e) => {
     e.preventDefault();
+
     try {
-      const user = await signInWithEmailAndPassword(auth, email, password);
-      console.log(user.user);
+      await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
       alert(err.code);
     }
@@ -20,10 +20,10 @@ function LoginInput() {
 
   return (
     <form onSubmit={loginFormHandle}>
-      <label className="d-block text-primary" htmlFor="email">
+      <label className="d-block text-primary fw-bold" htmlFor="email">
         Email
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="email"
           name="email"
           id="email"
@@ -31,10 +31,10 @@ function LoginInput() {
           required
         />
       </label>
-      <label className="d-block mt-3 text-primary" htmlFor="password">
+      <label className="d-block mt-3 text-primary fw-bold" htmlFor="password">
         Password
         <input
-          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none px-0 border-primary"
+          className="form-control border-0 rounded-0 border-bottom border-2 shadow-none p-0 pt-1 border-primary"
           type="password"
           name="password"
           id="password"
