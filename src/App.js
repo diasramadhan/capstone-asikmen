@@ -6,13 +6,18 @@ import Navbar from './components/Navbar/Navbar';
 import RegisterPage from './pages/RegisterPage';
 import useAuth from './hooks/useAuth';
 import { auth } from './utils/firebaseConfig';
+import Loading from './components/Loading/Loading';
 
 function App() {
-  const currentUser = useAuth();
+  const [currentUser, loading] = useAuth();
 
   const dummyLogOutHandler = async () => {
     await signOut(auth);
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   if (currentUser === null) {
     return (

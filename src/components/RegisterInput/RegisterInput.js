@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   createUserWithEmailAndPassword, signOut, updateProfile
 } from 'firebase/auth';
+import Swal from 'sweetalert2';
 import { auth } from '../../utils/firebaseConfig';
 import useInput from '../../hooks/useInput';
 import '../LoginInput/LoginInput.scss';
@@ -25,13 +26,28 @@ function RegisterInput() {
           displayName: name,
         });
         await signOut(auth);
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil!',
+          text: 'Akun berhasil dibuat',
+          confirmButtonColor: '#00adb5',
+        });
         navigate('/');
-        alert('Register berhasil!');
       } else {
-        alert('Konfirmasi password tidak sama!');
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal!',
+          text: 'Konfirmasi password tidak sama',
+          confirmButtonColor: '#00adb5',
+        });
       }
     } catch (err) {
-      alert(err.code);
+      Swal.fire({
+        icon: 'error',
+        title: 'Gagal!',
+        text: err.code,
+        confirmButtonColor: '#00adb5',
+      });
     }
   };
 
@@ -77,7 +93,7 @@ function RegisterInput() {
           required
         />
       </label>
-      <button className="btn btn-primary p-2 text-white border-0 mt-3 w-100 login-input__btn-login" type="submit">Register</button>
+      <button className="btn btn-primary p-2 text-white border-0 mt-3 w-100 login-input__btn-login" type="submit">Buat akun baru</button>
     </form>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoginInput.scss';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import Swal from 'sweetalert2';
 import { auth } from '../../utils/firebaseConfig';
 import useInput from '../../hooks/useInput';
 
@@ -14,7 +15,12 @@ function LoginInput() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
-      alert(err.code);
+      Swal.fire({
+        icon: 'error',
+        title: 'Gagal!',
+        text: err.code,
+        confirmButtonColor: '#00adb5',
+      });
     }
   };
 
