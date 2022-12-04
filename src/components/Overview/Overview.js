@@ -3,7 +3,7 @@ import './Overview.scss';
 
 function Overview() {
   return (
-    <header>
+    <section className="overview">
       <div className="container my-bg">
         <div className="row d-flex justify-content-center align-items-center overview mt-lg-5">
           <div className="col-lg-6 my-3 d-flex flex-column justify-content-center align-items-center justify-content-md-start align-items-md-start text-center text-md-start">
@@ -29,7 +29,7 @@ function Overview() {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }
 
