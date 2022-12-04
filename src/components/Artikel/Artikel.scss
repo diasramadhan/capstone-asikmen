@@ -1,0 +1,100 @@
+.artikel {
+  h2 {
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+  .green {
+    color: #00adb5;
+  }
+  .row-artikel {
+    row-gap: 2rem;
+
+    .col-center {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+  .card-artikel {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+
+    h3 {
+      font-weight: 500;
+      font-size: 1rem;
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #00adb5;
+      }
+    }
+    p {
+      color: #bbb;
+    }
+
+    .img-artikel {
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+
+  i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #00adb5;
+  }
+}
+
+$offset: 187;
+$duration: 1.4s;
+
+.spinner {
+  animation: rotator $duration linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash $duration ease-in-out infinite, colors ($duration * 4) ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #00adb5;
+  }
+  100% {
+    stroke: #00adb5;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+  50% {
+    stroke-dashoffset: $offset/4;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
+  }
+}
