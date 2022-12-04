@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import useAuth from './hooks/useAuth';
 import { auth } from './utils/firebaseConfig';
 import Loading from './components/Loading/Loading';
+import HomePage from './pages/HomePage';
 
 function App() {
   const [currentUser, loading] = useAuth();
@@ -25,6 +26,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="*" element={<LoginPage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </>
@@ -50,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;

@@ -1,0 +1,16 @@
+.cobain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-weight: 600;
+    color: rgb(59, 59, 59);
+  }
+}
+
+.cobain .description {
+  max-width: 760px;
+  color: #525252;
+}
