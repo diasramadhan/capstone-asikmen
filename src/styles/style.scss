@@ -1,3 +1,6 @@
+// Change boostrap primary color
+$primary: #00adb5;
+
 @import 'bootstrap/scss/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -32,3 +35,4 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 8rem;
 }
+
