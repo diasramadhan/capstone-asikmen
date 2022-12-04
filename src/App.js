@@ -25,7 +25,7 @@ function App() {
       <>
         <Navbar />
         <Routes>
-          <Route path="*" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
@@ -52,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;

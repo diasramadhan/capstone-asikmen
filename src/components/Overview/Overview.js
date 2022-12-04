@@ -1,5 +1,6 @@
 import React from 'react';
 import './Overview.scss';
+import { Link } from 'react-router-dom';
 
 function Overview() {
   return (
@@ -19,9 +20,9 @@ function Overview() {
               dapat mengganggu kehidupanmu, itu sangat tidak keren. Aplikasi ini adalah sahabat kamu
               sekarang, brodie~
             </p>
-            <a href="#" className="my-btn mt-3">
+            <Link className="my-btn mt-3" to="/register">
               Daftar Sekarang
-            </a>
+            </Link>
           </div>
 
           <div className="col-lg-6 d-flex justify-content-center align-items-center">

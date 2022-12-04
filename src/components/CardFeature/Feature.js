@@ -2,7 +2,7 @@
 import React from 'react';
 import CardFeature from './CardFeature';
 import './Feature.scss';
-import dataFeatures from './dataFetures';
+import dataFeatures from '../../utils/dataFetures';
 
 const features = dataFeatures();
 
