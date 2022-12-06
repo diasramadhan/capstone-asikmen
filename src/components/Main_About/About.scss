@@ -1,0 +1,124 @@
+.__container_content {
+    margin: 4rem 0 2rem 0;
+    max-width: 992px;
+
+    .about_title {
+        margin-top: 2rem;
+        margin-bottom: 10px;
+        color: #00adb5;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .about_text {
+        padding: 0 20px;
+        color: #393e46;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .about_text_justify {
+        padding: 0 20px;
+        color: #393e46;
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+.__container_main {
+    max-width: 992px;
+
+    .main_title {
+        margin-top: 2rem;
+        color: #00adb5;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .__main_content {
+        padding: 20px;
+
+        .card {
+            margin: 10px 0;
+            padding: 10px 0;
+            height: 280px;
+            overflow: hidden;
+            filter: grayscale(100%);
+            transition: 0.2s;
+
+            .img-fluid {
+                width: 180px;
+                margin-bottom: 10px;
+                border: 6px solid #00000018;
+            }
+
+            .stack {
+                width: 100%;
+                background-color: #00acb544;
+                padding: 20px 8px 8px 8px;
+                position: absolute;
+                transform: translateY(-300px);
+                transition: 0.2s;
+            }
+
+            .profile_title {
+                margin-top: 18px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .socialmedia_links {
+                width: 44px;
+                height: 44px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transition: 0.2s;
+
+                .bi-github {
+                    font-size: 30px;
+                    color: #ffffff;
+                    transition: 0.2s;
+                }
+
+                .bi-linkedin {
+                    font-size: 28px;
+                    color: #ffffff;
+                    transition: 0.2s;
+                }
+
+                .bi-instagram {
+                    font-size: 28px;
+                    color: #ffffff;
+                    transition: 0.2s;
+                }
+            }
+        }
+
+        .card:hover {
+            border-color: #00adb5;
+            animation: scale 0.2s ease-out 0s 1 alternate forwards;
+            filter: grayscale(0%);
+
+            .stack {
+                transform: translateY(0);
+                height: 100%;
+                top: 0;
+            }
+
+            .socialmedia_links:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
