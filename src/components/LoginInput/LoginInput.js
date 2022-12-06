@@ -18,7 +18,13 @@ function LoginInput() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/');
+      Swal.fire({
+        icon: 'success',
+        title: 'Berhasil!',
+        text: 'Anda Berhasil Login',
+        confirmButtonColor: '#00adb5',
+      });
+      navigate('/dashboard');
     } catch (err) {
       Swal.fire({
         icon: 'error',

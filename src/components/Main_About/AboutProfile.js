@@ -10,7 +10,7 @@ import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
 function About() {
   return (
     <Container className="__container_main" fluid>
-      <h4 className="text-center main_title">Team</h4>
+      <h4 className="text-center main_title">Team C22-070</h4>
       <div className="__main_content">
         <Row xs={1} md={2} lg={4}>
 

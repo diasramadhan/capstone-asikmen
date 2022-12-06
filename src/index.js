@@ -5,6 +5,7 @@ import App from './App';
 
 // Style & Bootstrap
 import './styles/style.scss';
+import './styles/responsive.scss';
 
 // For Bootstrap functionality
 import 'bootstrap/dist/js/bootstrap.bundle.min';

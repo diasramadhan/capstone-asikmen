@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Navbar from './components/Navbar/Navbar';
@@ -7,12 +7,15 @@ import useAuth from './hooks/useAuth';
 import Loading from './components/Loading/Loading';
 import AuthContext from './contexts/AuthContext';
 import DashboardPage from './pages/DashboardPage';
-import NavbarAuth from './components/NavbarAuth/NavbarAuth';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
+import Test from './pages/TestPage';
+import TestPreparation from './pages/TestPreparationPage';
+import Result from './pages/ResultPage';
 
 function App() {
   const [currentUser, loading] = useAuth();
+  const [historyTestId, setHistoryTestId] = useState(null);
 
   if (loading) {
     return <Loading />;
@@ -34,9 +37,11 @@ function App() {
 
   return (
     <AuthContext.Provider value={currentUser}>
-      <NavbarAuth />
       <Routes>
-        <Route path="/" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/test" element={<TestPreparation />} />
+        <Route path="/test/start" element={<Test userId={currentUser.uid} setHistoryTestId={setHistoryTestId} />} />
+        <Route path="/result" element={<Result userId={currentUser.uid} historyTestId={historyTestId} />} />
       </Routes>
     </AuthContext.Provider>
   );
