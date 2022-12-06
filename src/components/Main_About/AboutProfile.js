@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 import './About.scss';
+import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
 
 function About() {
   return (
@@ -23,15 +24,15 @@ function About() {
 
               <Stack className="justify-content-center stack" direction="horizontal" gap={2}>
                 <a className="socialmedia_links" href="https://github.com/diasramadhan/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-github" />
+                  <BsGithub className="bi bi-github" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.linkedin.com/in/dias-nur-ramadhan-00558b211/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-linkedin" />
+                  <BsLinkedin className="bi bi-linkedin" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.instagram.com/dias_nur_ramadhan/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-instagram" />
+                  <BsInstagram className="bi bi-instagram" />
                 </a>
               </Stack>
             </Card>
@@ -47,15 +48,15 @@ function About() {
 
               <Stack className="justify-content-center stack" direction="horizontal" gap={2}>
                 <a className="socialmedia_links" href="https://github.com/rizfadh" target="_blank" rel="noreferrer">
-                  <i className="bi bi-github" />
+                  <BsGithub className="bi bi-github" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.linkedin.com/in/rizfadh" target="_blank" rel="noreferrer">
-                  <i className="bi bi-linkedin" />
+                  <BsLinkedin className="bi bi-linkedin" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.instagram.com/rzy_fdhlh" target="_blank" rel="noreferrer">
-                  <i className="bi bi-instagram" />
+                  <BsInstagram className="bi bi-instagram" />
                 </a>
               </Stack>
             </Card>
@@ -71,15 +72,15 @@ function About() {
 
               <Stack className="justify-content-center stack" direction="horizontal" gap={2}>
                 <a className="socialmedia_links" href="https://github.com/Nugrohowisma/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-github" />
+                  <BsGithub className="bi bi-github" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.linkedin.com/in/nugroho-wisma-nurpanto-bbb041245/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-linkedin" />
+                  <BsLinkedin className="bi bi-linkedin" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.instagram.com/wisma_nugroho19/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-instagram" />
+                  <BsInstagram className="bi bi-instagram" />
                 </a>
               </Stack>
             </Card>
@@ -95,15 +96,15 @@ function About() {
 
               <Stack className="justify-content-center stack" direction="horizontal" gap={2}>
                 <a className="socialmedia_links" href="https://github.com/kuncoroadjie/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-github" />
+                  <BsGithub className="bi bi-github" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.linkedin.com/in/ridho-kuncoro-adji-wibowo-b0025a245/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-linkedin" />
+                  <BsLinkedin className="bi bi-linkedin" />
                 </a>
 
                 <a className="socialmedia_links" href="https://www.instagram.com/kuncr_/" target="_blank" rel="noreferrer">
-                  <i className="bi bi-instagram" />
+                  <BsInstagram className="bi bi-instagram" />
                 </a>
               </Stack>
             </Card>
