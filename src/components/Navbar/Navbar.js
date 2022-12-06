@@ -1,15 +1,16 @@
 import React from 'react';
 import './Navbar.scss';
 import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top my-nav">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src="/img/logo-brand.png" alt="logo brand asikmen" height="36" />
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -26,14 +27,14 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" aria-current="page" href="#product">
+                <Link className="nav-link" aria-current="page" to="/about">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item ">
                 <a className="nav-link" aria-current="page" href="#artikel">
@@ -41,10 +42,10 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item btn-login d-flex align-items-center text-white ">
-                <a className="nav-link nav-link__login" aria-current="page" href="#login">
+                <Link className="nav-link nav-link__login" aria-current="page" to="/login">
                   Login
                   <BsArrowRight strokeWidth={1} className="bi bi-arrow-right" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
