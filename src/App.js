@@ -8,6 +8,8 @@ import Loading from './components/Loading/Loading';
 import AuthContext from './contexts/AuthContext';
 import DashboardPage from './pages/DashboardPage';
 import NavbarAuth from './components/NavbarAuth/NavbarAuth';
+import HomePage from './pages/HomePage';
+
 
 function App() {
   const [currentUser, loading] = useAuth();
@@ -21,6 +23,7 @@ function App() {
       <>
         <Navbar />
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
