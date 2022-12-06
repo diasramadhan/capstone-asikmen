@@ -1,0 +1,26 @@
+.dashboard__bg-1 {
+  $bg-1: #00adb5;
+
+  background-color: $bg-1;
+  &:hover {
+    box-shadow: 0 0 10px rgba($bg-1, 0.7);
+  }
+}
+
+.dashboard__bg-2 {
+  $bg-2: #70367c;
+
+  background-color: $bg-2;
+  &:hover {
+    box-shadow: 0 0 10px rgba($bg-2, 0.7);
+  }
+}
+
+.dashboard__bg-3 {
+  $bg-3: #fd7e50;
+
+  background-color: $bg-3;
+  &:hover {
+    box-shadow: 0 0 10px rgba($bg-3, 0.7);
+  }
+}
