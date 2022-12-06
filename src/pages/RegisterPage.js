@@ -15,7 +15,7 @@ export default function RegisterPage() {
           <p className="mt-2">
             Sudah punya akun? login
             {' '}
-            <Link to="/" className="text-decoration-none">disini</Link>
+            <Link to="/login" className="text-decoration-none">disini</Link>
           </p>
         </div>
       </div>

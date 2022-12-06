@@ -1,0 +1,10 @@
+.dashboard-quotes {
+  background-color: #e0e7ff;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard-quotes {
+    max-width: 510px;
+  }
+}

@@ -1,0 +1,12 @@
+.navbar-auth__user {
+  border-radius: 100px 0 100px 100px;
+}
+
+.navbar-auth__logout {
+  $bg-logout: #dc3545;
+  
+  background-color: $bg-logout !important;
+  &:hover {
+    box-shadow: 0 0 10px rgba($bg-logout, 0.5);
+  }
+}
