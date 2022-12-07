@@ -6,40 +6,55 @@
   .green {
     color: #00adb5;
   }
-  .row-artikel {
-    row-gap: 2rem;
-
+  .card-row {
     .col-center {
       display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-    }
-  }
-  .card-artikel {
-    display: flex;
-    justify-content: center;
-    width: 20rem;
-
-    h3 {
-      font-weight: 500;
-      font-size: 1rem;
-      a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        color: #00adb5;
-      }
-    }
-    p {
-      color: #bbb;
-    }
-
-    .img-artikel {
-      height: 10rem;
-      object-fit: cover;
+      justify-content: space-evenly !important;
+      align-items: flex-start !important;
     }
   }
 }
 
+// Card News
+.card-row {
+  .card {
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    box-shadow: 3px 3px 47px -17px rgba(0, 0, 0, 0.1), -2px -2px 47px -17px rgba(0, 0, 0, 0.1);
+    width: 22rem;
+
+    a {
+      text-decoration: none;
+    }
+    .card-title {
+      color: #34a595;
+    }
+    .card-author {
+      color: #b7b7b7;
+    }
+    .card-author,
+    .card-text {
+      font-size: 0.9rem;
+    }
+    .card-text {
+      color: #474444;
+    }
+  }
+}
+
+.card-img,
+.card {
+  border-radius: 10px !important;
+  border: 0.5px solid whitesmoke;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #34a595 !important;
+}
+
+//loading
 .loading-container {
   display: flex;
   justify-content: center;

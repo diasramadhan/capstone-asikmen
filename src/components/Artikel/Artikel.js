@@ -1,10 +1,11 @@
+/* eslint-disable import/order */
 import React from 'react';
-import CardArtikel from './CardArtikel';
+import CardNews from './CardNews';
 import './Artikel.scss';
-
-function genereteFoto(angka) {
-  return `https://source.unsplash.com/200x10${angka}?mental+health`;
-}
+import showFormattedDateID from '../../utils/date-formater';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
 
 function Artikel() {
   const [artikels, setArtikels] = React.useState([]);
@@ -13,11 +14,11 @@ function Artikel() {
   React.useEffect(() => {
     async function getDataArtikel() {
       const request = await fetch(
-        'https://mental-health-info-api.p.rapidapi.com/news?rapidapi-key=829962c762mshd7b52cb2cc067bcp11aa32jsnbac417ddf5fa'
+        'https://newsapi.org/v2/everything?q=kesehatan+mental&apiKey=38b2da1756e34db59e31179cf5272796'
       );
 
       const response = await request.json();
-      setArtikels(response);
+      setArtikels(response.articles);
       setLoading(false);
     }
 
@@ -27,7 +28,7 @@ function Artikel() {
   return (
     <section className="artikel mt-5" id="artikel">
       <div className="container">
-        <h2 className="green">Artikel</h2>
+        <h2 className="green">Berita terbaru</h2>
         <h2>Tingkatkan Kesehatan Mental Anda</h2>
 
         {loading ? (
@@ -52,18 +53,44 @@ function Artikel() {
             </svg>
           </div>
         ) : (
-          <div className="row row-artikel p-5">
+          <Swiper
+            className="card-row p-5 mySwiper"
+            slidesPerView={3}
+            spaceBetween={25}
+            slidesPerGroup={3}
+            centeredSlides
+            loop
+            grabCursor
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            navigation
+            modules={[Pagination, Navigation]}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+              },
+              950: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+              },
+            }}
+          >
             {artikels.map((artikel, index) => (
-              <div className="col col-center" key={index.toString()}>
-                <CardArtikel
-                  img={genereteFoto(index)}
+              <SwiperSlide className="col-center" key={index.toString()}>
+                <CardNews
+                  urlToImage={artikel.urlToImage}
                   title={artikel.title}
                   url={artikel.url}
-                  source={artikel.source}
+                  author={artikel.author}
+                  publishedAt={showFormattedDateID(artikel.publishedAt)}
+                  content={artikel.content}
                 />
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         )}
       </div>
     </section>
