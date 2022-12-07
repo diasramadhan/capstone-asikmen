@@ -4,6 +4,8 @@ import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [about, setAbout] = React.useState(false);
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top my-nav">
@@ -27,20 +29,37 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link
+                  className="nav-link"
+                  aria-current="page"
+                  to="/"
+                  onClick={function () {
+                    setAbout(false);
+                  }}
+                >
                   Home
                 </Link>
               </li>
+              {about === false && (
+                <li className="nav-item ">
+                  <a className="nav-link" aria-current="page" href="#artikel">
+                    News
+                  </a>
+                </li>
+              )}
               <li className="nav-item ">
-                <Link className="nav-link" aria-current="page" to="/about">
+                <Link
+                  className="nav-link"
+                  aria-current="page"
+                  to="/about"
+                  onClick={function () {
+                    setAbout(true);
+                  }}
+                >
                   About Us
                 </Link>
               </li>
-              <li className="nav-item ">
-                <a className="nav-link" aria-current="page" href="#artikel">
-                  Artikel
-                </a>
-              </li>
+
               <li className="nav-item btn-login d-flex align-items-center text-white ">
                 <Link className="nav-link nav-link__login" aria-current="page" to="/login">
                   Login
