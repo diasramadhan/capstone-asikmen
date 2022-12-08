@@ -1,49 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import Navbar from './components/Navbar/Navbar';
+import RegisterPage from './pages/RegisterPage';
+import useAuth from './hooks/useAuth';
+import Loading from './components/Loading/Loading';
+import AuthContext from './contexts/AuthContext';
+import DashboardPage from './pages/DashboardPage';
+import HomePage from './pages/HomePage';
+import HistoryPage from './pages/HistoryPage';
+import AboutUs from './pages/AboutUs';
+import Test from './pages/TestPage';
+import TestPreparation from './pages/TestPreparationPage';
+import Result from './pages/ResultPage';
+import PageNotFound from './pages/PageNotFound';
+import TodoPage from './pages/TodoPage';
 
 function App() {
+  const [currentUser, loading] = useAuth();
+  const [historyTestId, setHistoryTestId] = useState(null);
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (currentUser === null) {
+    return (
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    );
+  }
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
-                Disabled
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <AuthContext.Provider value={currentUser}>
+      <Routes>
+        <Route path="/history" element={<HistoryPage />} />
+        <Route path="/test" element={<TestPreparation />} />
+        <Route
+          path="/test/start"
+          element={<Test userId={currentUser.uid} setHistoryTestId={setHistoryTestId} />}
+        />
+        <Route path="/result" element={<Result historyTestId={historyTestId} />} />
+        <Route path="/todo" element={<TodoPage />} />
+        <Route path="*" element={<DashboardPage />} />
+      </Routes>
+    </AuthContext.Provider>
   );
 }
 
