@@ -3,8 +3,8 @@ import './Navbar.scss';
 import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
-  const [about, setAbout] = React.useState(false);
+function Navbar({ hideNews }) {
+  const news = hideNews;
 
   return (
     <header>
@@ -33,14 +33,11 @@ function Navbar() {
                   className="nav-link"
                   aria-current="page"
                   to="/"
-                  onClick={function () {
-                    setAbout(false);
-                  }}
                 >
                   Home
                 </Link>
               </li>
-              {about === false && (
+              {news === false && (
                 <li className="nav-item ">
                   <a className="nav-link" aria-current="page" href="#artikel">
                     News
@@ -52,9 +49,6 @@ function Navbar() {
                   className="nav-link"
                   aria-current="page"
                   to="/about"
-                  onClick={function () {
-                    setAbout(true);
-                  }}
                 >
                   About Us
                 </Link>
@@ -65,9 +59,6 @@ function Navbar() {
                   className="nav-link nav-link__login"
                   aria-current="page"
                   to="/login"
-                  onClick={function () {
-                    setAbout(true);
-                  }}
                 >
                   Login
                   <BsArrowRight strokeWidth={1} className="bi bi-arrow-right" />

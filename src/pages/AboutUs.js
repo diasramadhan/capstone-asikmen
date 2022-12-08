@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar/Navbar';
 function AboutUs() {
   return (
     <>
-      <Navbar />
+      <Navbar hideNews />
       <AboutContent />
       <AboutProfile />
       <Footer />

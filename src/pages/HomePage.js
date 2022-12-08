@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar/Navbar';
 function HomePage() {
   return (
     <>
-      <Navbar />
+      <Navbar hideNews={false} />
       <Overview />
       <Feture />
       <Artikel />

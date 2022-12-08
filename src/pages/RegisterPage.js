@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar/Navbar';
 export default function RegisterPage() {
   return (
     <>
-      <Navbar />
+      <Navbar hideNews />
       <article className="container">
         <div className="row row-cols-1 row-cols-lg-2">
           <div className="col d-flex flex-column justify-content-center align-items-center">
