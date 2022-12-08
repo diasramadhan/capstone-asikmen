@@ -10,11 +10,11 @@ import ConfirmTest from '../components/ConfirmTest/ConfirmTest';
 function Test({ userId, setHistoryTestId }) {
   const questions = useGetValue('questions');
   const answers = useGetValue('answer');
+  const createResult = useCreateValue();
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [scoreValue, setscoreValue] = useState(0);
-  const createResult = useCreateValue();
 
   const createNewResult = async () => {
     let res = 0;

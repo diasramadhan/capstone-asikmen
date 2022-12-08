@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import FooterSecondary from '../components/Footer/FooterSecondary';
+import BackButton from '../components/BackButton/BackButton';
 
 function TestPreparation() {
   return (
     <>
       <section className="test-preparation p-3">
-        <Link className="btn btn-outline-primary fs-6" to="/dashboard">
-          <FiArrowLeft /> Back
-        </Link>
+        <BackButton />
         <div className="text-preparation-wrapper container mt-5">
           <h1 className="test-preparation__title fw-bold text-center text-primary">Desclaimer</h1>
           <p className="text-left">Catatan penting sebelum Anda memulai:</p>

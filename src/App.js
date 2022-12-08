@@ -8,10 +8,12 @@ import Loading from './components/Loading/Loading';
 import AuthContext from './contexts/AuthContext';
 import DashboardPage from './pages/DashboardPage';
 import HomePage from './pages/HomePage';
+import HistoryPage from './pages/HistoryPage';
 import AboutUs from './pages/AboutUs';
 import Test from './pages/TestPage';
 import TestPreparation from './pages/TestPreparationPage';
 import Result from './pages/ResultPage';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const [currentUser, loading] = useAuth();
@@ -30,6 +32,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </>
     );
@@ -39,9 +42,11 @@ function App() {
     <AuthContext.Provider value={currentUser}>
       <Routes>
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/history" element={<HistoryPage />} />
         <Route path="/test" element={<TestPreparation />} />
         <Route path="/test/start" element={<Test userId={currentUser.uid} setHistoryTestId={setHistoryTestId} />} />
-        <Route path="/result" element={<Result userId={currentUser.uid} historyTestId={historyTestId} />} />
+        <Route path="/result" element={<Result historyTestId={historyTestId} />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </AuthContext.Provider>
   );

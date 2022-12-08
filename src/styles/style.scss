@@ -36,7 +36,29 @@ html {
   scroll-padding-top: 8rem;
 }
 
+.history-container {
+  background-color: #F0F3F8;
+  min-height: 100vh;
+  padding: 50px 180px 30px 180px;
+}
+
+.history-icon {
+  font-size: 1.7em;
+  color: #FD7E50;
+  margin-right: 10px;
+}
+
+.history-title {
+  width: 260px;
+  border-radius: 10px;
+  padding: 5px 15px;
+  background-color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .text-preparation-wrapper{
+  padding-top: 40px;
   width: 60%;
   margin-bottom: 80px;
 }

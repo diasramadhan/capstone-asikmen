@@ -61,7 +61,14 @@ function Navbar() {
               </li>
 
               <li className="nav-item btn-login d-flex align-items-center text-white ">
-                <Link className="nav-link nav-link__login" aria-current="page" to="/login">
+                <Link
+                  className="nav-link nav-link__login"
+                  aria-current="page"
+                  to="/login"
+                  onClick={function () {
+                    setAbout(true);
+                  }}
+                >
                   Login
                   <BsArrowRight strokeWidth={1} className="bi bi-arrow-right" />
                 </Link>

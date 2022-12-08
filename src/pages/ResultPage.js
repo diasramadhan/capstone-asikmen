@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../contexts/AuthContext';
 import useGetValue from '../hooks/useGetValue';
 import Loading from '../components/Loading/Loading';
 
-function Result({ userId, historyTestId }) {
-  const history = useGetValue(`/history/${userId}/${historyTestId}`);
+function Result({ historyTestId }) {
+  const currentUser = React.useContext(AuthContext);
+  const history = useGetValue(`/history/${currentUser.uid}/${historyTestId}`);
   const result = useGetValue('results');
 
   const loading = history.isLoading || result.isLoading;

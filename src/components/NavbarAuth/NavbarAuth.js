@@ -8,6 +8,7 @@ import './NavbarAuth.scss';
 
 export default function NavbarAuth() {
   const currentUser = React.useContext(AuthContext);
+  console.log(currentUser);
   const navigate = useNavigate();
 
   const signOutHandler = async () => {
