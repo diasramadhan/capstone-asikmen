@@ -7,6 +7,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
+function genereteFoto(angka) {
+  return `https://source.unsplash.com/200x10${angka}?mental+health`;
+}
+
 function Artikel() {
   const [artikels, setArtikels] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
@@ -14,11 +18,11 @@ function Artikel() {
   React.useEffect(() => {
     async function getDataArtikel() {
       const request = await fetch(
-        'https://newsapi.org/v2/everything?q=kesehatan+mental&apiKey=38b2da1756e34db59e31179cf5272796'
+        'https://newsdata.io/api/1/news?apikey=pub_1429486ae848c0261c01dad8f9a76438dfa43&q=mental%20health&language=en,in&category=health '
       );
 
       const response = await request.json();
-      setArtikels(response.articles);
+      setArtikels(response.results);
       setLoading(false);
     }
 
@@ -29,7 +33,7 @@ function Artikel() {
     <section className="artikel mt-5" id="artikel">
       <div className="container">
         <h2 className="green">Berita terbaru</h2>
-        <h2>Tingkatkan Kesehatan Mental Anda</h2>
+        <h2>Tingkatkan Kesehatan Anda</h2>
 
         {loading ? (
           <div className="loading-container">
@@ -81,12 +85,12 @@ function Artikel() {
             {artikels.map((artikel, index) => (
               <SwiperSlide className="col-center" key={index.toString()}>
                 <CardNews
-                  urlToImage={artikel.urlToImage}
+                  urlToImage={artikel.image_url || genereteFoto(index)}
                   title={artikel.title}
-                  url={artikel.url}
-                  author={artikel.author}
-                  publishedAt={showFormattedDateID(artikel.publishedAt)}
-                  content={artikel.content}
+                  url={artikel.link}
+                  author={artikel.source_id}
+                  publishedAt={artikel.pubDate}
+                  content={artikel.description}
                 />
               </SwiperSlide>
             ))}

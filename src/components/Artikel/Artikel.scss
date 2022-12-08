@@ -27,6 +27,10 @@
     a {
       text-decoration: none;
     }
+    .card-img {
+      height: 10rem !important;
+      object-fit: cover;
+    }
     .card-title {
       color: #34a595;
     }
