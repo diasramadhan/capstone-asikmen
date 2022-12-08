@@ -13,7 +13,7 @@ function BackButton() {
           <FiArrowLeft /> Back
         </Link>
       ) : (
-        <Link className="back-btn btn btn-outline-primary fs-6" to="/dashboard">
+        <Link className="back-btn btn btn-outline-primary fs-6" to="/*">
           <FiArrowLeft /> Back
         </Link>
       )}

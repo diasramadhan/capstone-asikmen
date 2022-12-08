@@ -18,6 +18,7 @@
     "no-alert": 0,
     "linebreak-style": 0,
     "comma-dangle": 0,
+    "operator-linebreak": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "react/jsx-one-expression-per-line": 0,
     "react/no-array-index-key": 0,
@@ -25,6 +26,8 @@
     "object-curly-newline": 0,
     "func-names": 0,
     "react/jsx-no-bind": 0,
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "jsx-a11y/no-static-element-interactions":0,
+    "jsx-a11y/click-events-have-key-events":0
   }
 }

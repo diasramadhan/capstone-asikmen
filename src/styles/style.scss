@@ -36,19 +36,25 @@ html {
   scroll-padding-top: 8rem;
 }
 
-.history-container {
-  background-color: #F0F3F8;
+.history-container,
+.todo-container {
+  background-color: #f0f3f8;
   min-height: 100vh;
   padding: 50px 180px 30px 180px;
 }
 
-.history-icon {
+.history-icon,
+.todo-icon {
   font-size: 1.7em;
-  color: #FD7E50;
+  color: #fd7e50;
   margin-right: 10px;
 }
+.todo-icon {
+  color: #00adb5 !important;
+}
 
-.history-title {
+.history-title,
+.todo-title {
   width: 260px;
   border-radius: 10px;
   padding: 5px 15px;
@@ -57,7 +63,7 @@ html {
   margin-bottom: 30px;
 }
 
-.text-preparation-wrapper{
+.text-preparation-wrapper {
   padding-top: 40px;
   width: 60%;
   margin-bottom: 80px;
@@ -66,19 +72,17 @@ html {
 .test-container {
   min-height: 100vh;
   padding: 50px 100px;
-  display: grid; 
-  grid-template-columns: 1.2fr 0.8fr; 
-  grid-template-rows: 1fr; 
-  grid-template-areas: 
-    "a1 a2"
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'a1 a2';
 }
 
-.result-section{
+.result-section {
   padding: 100px 200px;
   text-align: center;
 }
 
-.btn:hover{
-  color:#fff;
+.btn:hover {
+  color: #fff;
 }
-
