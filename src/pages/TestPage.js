@@ -6,10 +6,12 @@ import showFormattedDateID from '../utils/date-formater';
 import Question from '../components/QuestionList/QuestionList';
 import AnswerOption from '../components/AnswerOption/AnswerOption';
 import ConfirmTest from '../components/ConfirmTest/ConfirmTest';
+import initialOptionTodo from '../utils/initOptionTodo';
 
 function Test({ userId, setHistoryTestId }) {
   const questions = useGetValue('questions');
   const answers = useGetValue('answer');
+  const optionsTodo = useGetValue(`todo/users/${userId}`);
   const createResult = useCreateValue();
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -19,22 +21,27 @@ function Test({ userId, setHistoryTestId }) {
   const createNewResult = async () => {
     let res = 0;
     if (scoreValue < 14) {
-      res = 'Depresi Ringan';
+      res = 'Kamu baik-baik saja';
     } else if (scoreValue < 40) {
-      res = 'Depresi Sedang';
+      res = 'Depresi ringan';
     } else {
-      res = 'Depresi Berat';
+      res = 'Depresi berat';
     }
-    const path = `/history/${userId}/`;
-    const id = Date.now();
-    const value = {
+    const pathHistory = `/history/${userId}/`;
+    const idHistory = Date.now();
+    const valueHistory = {
       date: showFormattedDateID(Date.now()),
       status: res,
       score: scoreValue,
     };
 
-    await createResult.pushValue(path, value, id);
-    setHistoryTestId(id);
+    await createResult.pushValue(pathHistory, valueHistory, idHistory);
+    setHistoryTestId(idHistory);
+
+    const pathTodo = `todo/users/${userId}`;
+    if (optionsTodo.snapshot === null) {
+      initialOptionTodo(createResult, pathTodo);
+    }
   };
 
   const isLoading = questions.isLoading || answers.isLoading;

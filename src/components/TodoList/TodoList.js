@@ -3,11 +3,19 @@ import BlankTodo from './BlankTodo';
 import TodoAsikmen from './TodoAsikmen';
 import './TodoList.scss';
 
-function TodoList({ dataTodo }) {
+function TodoList({ dataTaskTodo, dataOptionsTodo, userId }) {
   return (
     <div className="todo-list__wrapper">
       {
-        dataTodo == null ? <BlankTodo /> : <TodoAsikmen dataTodo={dataTodo} />
+        dataOptionsTodo == null ? (
+          <BlankTodo />
+        ) : (
+          <TodoAsikmen
+            dataTaskTodo={dataTaskTodo}
+            dataOptionsTodo={dataOptionsTodo}
+            userId={userId}
+          />
+        )
       }
     </div>
   );

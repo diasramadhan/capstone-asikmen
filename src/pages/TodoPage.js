@@ -8,16 +8,12 @@ import useGetValue from '../hooks/useGetValue';
 
 function TodoPage() {
   const currentUser = React.useContext(AuthContext);
-  const history = useGetValue(`history/${currentUser.uid}`);
-  const todo = useGetValue('todo');
-
-  const loading = history.isLoading || todo.isLoading;
-
+  const taskTodo = useGetValue('todo/task');
+  const optionsTodo = useGetValue(`todo/users/${currentUser.uid}`);
+  const loading = taskTodo.isLoading || optionsTodo.isLoading;
   if (loading) {
     return (<Loading />);
   }
-
-  const dataTodo = Object.values(todo.snapshot);
 
   return (
     <div className="todo-container">
@@ -26,10 +22,14 @@ function TodoPage() {
         <TbCheckbox className="todo-icon" />
         Todolist
       </h3>
-      { history.snapshot == null ? (
+      { optionsTodo.snapshot == null ? (
         <TodoList dataTodo={null} />
       ) : (
-        <TodoList dataTodo={dataTodo} />
+        <TodoList
+          dataTaskTodo={Object.values(taskTodo.snapshot)}
+          dataOptionsTodo={Object.values(optionsTodo.snapshot)}
+          userId={currentUser.uid}
+        />
       )}
     </div>
   );

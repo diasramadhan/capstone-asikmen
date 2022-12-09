@@ -3,8 +3,8 @@ import { FaCheckCircle } from 'react-icons/fa';
 import './TodoAsikmen.scss';
 import useUpdateValue from '../../hooks/useUpdateValue';
 
-function TodoAsikmen({ dataTodo }) {
-  const [toDo, setToDo] = React.useState(dataTodo);
+function TodoAsikmen({ dataTaskTodo, dataOptionsTodo, userId }) {
+  const [toDo, setToDo] = React.useState(dataOptionsTodo);
   const updateTodo = useUpdateValue();
 
   const markDone = async (id, todostatus) => {
@@ -12,7 +12,7 @@ function TodoAsikmen({ dataTodo }) {
     if (todostatus === false) {
       finalStatus = true;
     }
-    const path = `/todo/${id}`;
+    const path = `/todo/users/${userId}/${id}`;
     const value = {
       status: finalStatus,
     };
@@ -52,7 +52,7 @@ function TodoAsikmen({ dataTodo }) {
                   <div className="col todoBg">
                     <div className={task.status ? 'done' : ''}>
                       <span className="todoNumber">{index + 1}</span>
-                      <span className="todoText">{task.title}</span>
+                      <span className="todoText">{dataTaskTodo[index].todoText}</span>
                     </div>
 
                     <div className="iconsWrap">
