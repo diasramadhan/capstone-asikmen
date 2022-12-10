@@ -17,7 +17,7 @@ function CardNews({ urlToImage, title, url, author, publishedAt, content }) {
         </a>
         <p className="card-author">{author}</p>
         <p className="card-publish">{publishedAt}</p>
-        <p className="card-text card-content text-truncate" title={content}>
+        <p className="card-text card-content" title={content}>
           {content}
         </p>
       </div>

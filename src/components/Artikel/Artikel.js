@@ -18,11 +18,11 @@ function Artikel() {
   React.useEffect(() => {
     async function getDataArtikel() {
       const request = await fetch(
-        'https://newsdata.io/api/1/news?apikey=pub_1429486ae848c0261c01dad8f9a76438dfa43&q=mental%20health&language=en,in&category=health '
+        'https://api.thenewsapi.com/v1/news/all?api_token=yb4gHclNYnaFaPRM4pZmHrlj1nbKcmlZcDfADAGQ&search=kesehatan+mental'
       );
 
       const response = await request.json();
-      setArtikels(response.results);
+      setArtikels(response.data);
       setLoading(false);
     }
 
@@ -78,7 +78,7 @@ function Artikel() {
               },
               950: {
                 slidesPerView: 3,
-                slidesPerGroup: 3,
+                slidesPerGroup: 1,
               },
             }}
           >
@@ -87,9 +87,9 @@ function Artikel() {
                 <CardNews
                   urlToImage={artikel.image_url || genereteFoto(index)}
                   title={artikel.title}
-                  url={artikel.link}
-                  author={artikel.source_id}
-                  publishedAt={artikel.pubDate}
+                  url={artikel.url}
+                  author={artikel.source}
+                  publishedAt={showFormattedDateID(artikel.published_at)}
                   content={artikel.description}
                 />
               </SwiperSlide>

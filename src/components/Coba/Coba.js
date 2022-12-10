@@ -8,7 +8,7 @@ function Coba() {
         <h2>Cobain Website Keren Ini Sekarang!</h2>
         <p className="description">
           Please cobain lah aplikasi ini, udah susah-susah buat, mana pas bikin sampe begadang,
-          terus juga ditambah weekend. Jadi, please cobain lah ya.
+          website ini bagus banget buat nikatin kesehatan mental kamu, Asikmen !
         </p>
       </section>
     </div>
