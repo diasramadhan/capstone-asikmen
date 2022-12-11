@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# ASIKMEN (Asisten Kesehatan Mental)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71951529/206901839-8690f89e-1bd1-45c7-9fa6-75ae10378e51.png" alt="Logo" >
+  <h3 align="center">ASIKMEN</h3>
+</p>
 
-## Available Scripts
+<p align="center">
+  Sebuah cara mudah mengatasi masalah kesehatan mentalmu
+  <br />
+  <a href="https://drive.google.com/file/d/17duHT2ArKVWNhozf3oK9TxFrr0pTo0K0/view?usp=sharing"><strong>Explore the docs »</strong></a>
+  <br />
+</p>
 
-In the project directory, you can run:
+<pre align="center">
+  <a href="https://youtu.be/HflYbOPsPA8">VIEW DEMO</a> • <a href="https://youtu.be/nJKPXcVVK9A">VIDEO PRESENTATION</a> • <a href="https://asikmen-app.netlify.app/">VISIT WEBSITE</a>
+</pre>
 
-### `npm start`
+# Table of Content :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. ##### [Our team](#1)
+2. ##### [App Description](#2)
+3. ##### [Project Resources](#3)
+4. ##### [Academic Paper](#4)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a id="1"></a>
+## Our Team C22-070
 
-### `npm test`
+| ID        | Nama                                                                                                                                                                                                                                    |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R358X0916 | <a href="https://www.linkedin.com/in/dias-nur-ramadhan-00558b211/"><img alt="undefined" src="https://img.shields.io/badge/dias%20nur%20ramadhan-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>                   |
+| R290X0702 | <a href="https://www.linkedin.com/in/rizfadh/"><img alt="undefined" src="https://img.shields.io/badge/muhammad%20rizky%20fadhillah-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>                                |
+| R358X0920 | <a href="https://www.linkedin.com/in/ridho-kuncoro-adji-wibowo-b0025a245/"><img alt="undefined" src="https://img.shields.io/badge/ridho%20kuncoro%20adji%20wibowo-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| R358X0919 | <a href="https://www.linkedin.com/in/nugroho-wisma-nurpanto-bbb041245/"><img alt="undefined" src="https://img.shields.io/badge/nugroho%20wisma%20nurpanto-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>         |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a id="2"></a>
+## App Description : ASIKMEN - Asisten Kesehatan Mental
 
-### `npm run build`
+<P align="center">
+  <img src="https://user-images.githubusercontent.com/71951529/206899464-594df692-c52c-41d6-a3ac-4faa8ced3d67.svg" alt="Logo" height="80">
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<b> ASIKMEN </b> merupakan sebuah aplikasi website yang akan mendiagnosis kesehatan mental pengguna menggunakan sistem CBT dan memberikan pencegahan juga solusi terhadap gangguan mental yang terdeteksi.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<b>Background :</b>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p>Kesehatan mental merupakan hal penting bagi setiap orang, pemicu kesehatan mental yang buruk seseorang dapat disebabkan dari keadaan lingkungan sosial ataupun keluarga yang buruk. Berdasarkan penelitian yang dilakukan oleh University of Queensland dan Johns Hopkins Bloomberg School of Public Health menemukan bahwa 1 dari 20 (sekitar 5.5% yaitu 2,45 juta) remaja di Indonesia terdiagnosis memiliki gangguan mental.<p/>
+<p>Lalu bagaimana masyarakat dapat mengetahui dan menjaga kondisi kesehatan mental mereka? untuk menjawab pertanyaan tersebut tim kami membuat aplikasi ASIKMEN yang akan mendiagnosis kesehatan mental pengguna menggunakan sistem CBT dan memberikan pencegahan juga solusi terhadap gangguan mental yang terdeteksi.<p/>
+<p>Dalam proses pengerjaan projek capstone ini, kelompok kami mengerjakannya sedikit berbeda dengan timeline project schedule yang telah kami buat pada project plan. Pada pada project plan, tim kami merencanakan project akan dikerjakan dalam waktu sekitar ± 5 minggu, tetapi saat waktu pengerjaannya tim kami mengerjakannya dalam waktu sekitar ± 4 minggu. Pada project plan tim kami hanya akan membuat fitur tes CBT, news/article, dan autentikasi seperti login dan register. Tetapi pada saat pembuatan projek, tim kami memutuskan untuk menambahkan dua fitur baru yaitu fitur history yang berguna untuk melihat riwayat hasil tes yang telah pengguna lakukan, dan juga fitur todo yang berguna untuk membimbing pengguna dalam mengatasi masalah kesehatan mental yang telah terdeteksi.<p/>
 
-### `npm run eject`
+<a id="3"></a>
+## Project Resources
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- _Bahasa Pemograman_ : [Javascript](https://www.javascript.com/)
+- _Library_ : [React JS](https://reactjs.org/), [React-DOM](https://reactjs.org/docs/react-dom.html), [React-Router-DOM](https://reactrouter.com/), [React Icons](https://react-icons.github.io/react-icons/), [Lazysizes](https://afarkas.github.io/lazysizes/index.html), [SweetAlert2](https://sweetalert2.github.io/), [Swiper JS](https://swiperjs.com/), [Sass](https://sass-lang.com/), [Babel](https://babeljs.io/)
+- _Framework_ : [Bootstrap](https://getbootstrap.com)
+- _Database_ : [Realtime Database Firebase](https://firebase.google.com/)
+- _API_ : [The News API](https://api.thenewsapi.com/v1/news/all?api_token=yb4gHclNYnaFaPRM4pZmHrlj1nbKcmlZcDfADAGQ&search=kesehatan+mental), [Quote API](https://github.com/lukePeavey/quotable)
+- _Linter_ : [ESlint](https://eslint.org/)
+- _Assets_ : [Story Set](https://storyset.com/), [Google Font](https://fonts.google.com/)
+- _Deploy Server_ : [Netlify](https://www.netlify.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a id="4"></a>
+## Academic Paper :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+  <li>
+    <p>Holly E. Erskine Ph.D et al., “Measuring the Prevalence of Mental Disorders in Adolescents in Kenya, Indonesia, and Vietnam: Study Protocol for the National Adolescent Mental Health Surveys”, Journal of Adolescent Health, vol xxx, no. 1-8, 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1054139X21002676.</p>
+  </li>
+  <li>
+    <p>Rahmadhani , Annisa dkk., “Sistem Pakar Deteksi Dini Kesehatan Mental Menggunakan Metode Dempster-Shafer”,  Jurnal Ilmiah SISFOTENIKA, vol. 10, no. 1, 2020. [Online]. Available: https://www.researchgate.net/publication/341640659_Sistem_Pakar_Deteksi_Deteksi_Dini_Kesehatan_Mental_Menggunakan_Dempster_Shafer</p>
+  </li>
+  <li>
+    <p>Graha Virgian Gustira Putri, “Sistem Pakar Diagnosa Mental Ilness Psikosis dengan Menggunakan Metode Certainty Factor”, Jurnal Inovtek Polbeng - Seri Informatika, vol. 3, no. 2, 2018. [Online]. Available: http://ejournal.polbeng.ac.id/index.php/ISI/article/view/453</p>
+  </li>
+</ul>
